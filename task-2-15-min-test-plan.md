@@ -11,7 +11,7 @@ A 15 minute test for this scope of functionality focuses on positive test cases 
 Caviat:  this test plan is written based on observed behavior of functionality rather than on functional requirements or other description of expected behavior.  As such, functionality may be missed or misunderstood.
 
 
-Prereq: Log into Posit Cloud
+## Prereq: Log into Posit Cloud
 
 
 ## Landing page format
@@ -46,8 +46,127 @@ No further verification of the links in the footer will be completed in this tes
 
 ### Main pane
 
+Verify "Your Workspace" is the main pane, further validation below
 
 
-## Your Workspace main pane
+## Your Workspace
 
-1. 
+### Visual verification of pane controls
+
+1. Header contains
+	- "Your Workspace" which is a link, with your username in smaller type below
+	- Tabs across the header are "Content", "Usage", and "About"
+	- Profile link with your username is on the right, clicking on it pops up a dialog with jprofile information and links
+2. Left navigation pane contains
+	- "Your Content" 
+	- "Archive" 
+	- "Trash" 
+3. Central pane contains
+	- "Your Content ()" with the number of content items in the ()
+	- "New Project" dropdown with "New Project from Template", "New RStudio Project", "New Jupyter Project", and "New Project from Git Repository"
+	- Content list with "Access" and "Sort" dropdown controls and a search box
+
+
+### Functional verification of "Your Content"
+
+New Project from Template
+1. Click "New Project" and click "New Project from Template"
+2. Verify template list
+3. Select a template
+4. Click "OK"
+5. Verify project is created and opened
+6. Click on "Untitled Project" on the top to rename the project
+7. Click on "Your Workspace" at the top
+8. Verify the project is in the "Your Content" list with the expected name and that the number of projects has updated in the () next to "Your Content"
+
+New RStudio Project
+1. Click "New Project" and click "New RStudio Project"
+2. Verify project is created and opened
+3. Rename the project
+4. Click on "Your Workspace" at the top
+5. Verify the project is in the "Your Content" list with the expected name and that the number of projects has updated in the () next to "Your Content"
+
+New Jupyter Project
+1. Click "New Project" and click "New Jupyter Project"
+2. Verify project is created and opened
+3. Rename the project
+4. Click on "Your Workspace" at the top
+5. Verify the project is in the "Your Content" list with the expected name and that the number of projects has updated in the () next to "Your Content"
+Note:  I could not add a Jupyter project in the free plan
+
+New Project from Git Repository
+1. Click "New Project from Git Repository"
+2. Verify pop up dialog
+Note: a longer test would create a project from a Git Repo
+
+Click through the "Access" drop down entries and verify project list updates
+
+Click through the "Sort" drop down entries and verify project list updates
+
+Search the list
+1. Enter a value in the search box which matches only one of the projects in the list and hit enter
+2. Verify the project list updates with only the matching project
+3. Click the x icon on the right of the search box
+4. Verify the project list updates to show all of the projects
+
+Copy a project
+1. Click the copy button next to one of the projects in the list
+2. Click OK in the pop-up dialog to copy the project
+3. Veirfy project is created and opened
+4. Click on "Your Workspace" at the top
+5. Verify the project is in the "Your Content" list with the expected name and that the number of projects has updated in the () next to "Your Content"
+
+Delete a project
+1. Click the delete button next to one of the projects in the list
+2. Verify the pop-up message that states the project has been deleted
+3. Verify the project is no longer in the list
+
+Export a project
+1. Click the export button next to one of the projects on the list
+2. Verify the "Project Export Complete" pop-up and click the "Download" button 
+3. Verify the project zip file downloaded
+4. Verify the project is still in the project list
+
+Archive a project
+1. Click the "..." icon next to one of the projects on the list and click "Move to Archive"
+2. Verify the pop-up message that states the project has been archived
+3. Verify the project is no longer on the project list
+
+Click the "..." icon next to one of the projects on the list and click "Share Link", verify the pop-up
+
+Click the "..." icon next to one of the projects on the list and click "Settings", verify the settings pop-up
+Note: normally I would put information on what to verify.
+
+
+### Functional verification of navigation pane, Archive and Trash
+
+1. Navigate to "Archive" 
+2. Verify the archive page opens and has at least one entry.  Note: this must be executed after the "Archive a project" test above
+3. Click "Move to Trash" next to a project
+4. Verify the project is removed from the list
+5. Navigate to "Trash"
+6. Verify the trash page opens and has at least two entries.  Note: this must be executed in order also.
+7. Click "Restore" on one of the projects and "Move to Archive" on the other
+8. Verify the two projects are no longer on the list
+9. Navigate to "Archive" and verify the project moved is there
+10. Click "Restore" on a project in the list
+11. Navigate to "Your Content" and verify both restored projects are in the list.
+12. Click "Delete" on one of the projects
+13. Navigate to "Trash"
+14. Click "Empty Trash"
+15. Click "OK" to confirm emptying the trash
+16. Verify the trash list is empty
+17. Navigate to "Your Content" and verify none of the projects which were in the trash are on the project list
+ 
+### Functional verification of header
+
+Usage
+1. Click on "Usage" in the header
+2. Verify "Compute Hours", "Active Content", and "Compute Hours" contain content which reflects at least the usage during this test
+3. Verify "Content" contains entries for at least the projects completed in this test
+4. Click another date in the date list across the top and verify the page content changes
+5. Click the drop down menu to switch from "Usage Period" to "Calendar Month" and verify the page content changes
+6. Click another month in the month list across the top and verify the page content changes
+
+About
+1. Click About, verify information is provided
