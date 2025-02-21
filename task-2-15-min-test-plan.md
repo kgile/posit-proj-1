@@ -1,7 +1,7 @@
 
 # Posit Cloud Smoke Test Plan
 
-High level functional test of Posit Cloud which can be executed manually in 15 minutes
+High level functional test of Posit Cloud which can be executed manually in 15 minutes.  This covers click through of almost all links/dialogs, and execution of primary functionality.
 
 A 15 minute test for this scope of functionality focuses on positive test cases with limited or no
 - negative cases:  verifying proper handling of invalid input and actions
@@ -138,7 +138,7 @@ Click the "..." icon next to one of the projects on the list and click "Settings
 Note: normally I would put information on what to verify.
 
 
-### Functional verification of navigation pane, Archive and Trash
+### Functional verification of Your Workspace navigation pane, Archive and Trash
 
 1. Navigate to "Archive" 
 2. Verify the archive page opens and has at least one entry.  Note: this must be executed after the "Archive a project" test above
@@ -170,3 +170,34 @@ Usage
 
 About
 1. Click About, verify information is provided
+
+
+## Functional verification of Posit Cloud navigation pane
+
+### New Space
+
+1. Click "New Space"
+2. Enter a space name in the pop-up dialog and click "Create"
+3. Verify a new space is in the navigation pane with the name provided in the previous step
+4. Verify the main pane now shows the new space, and that there are "Data" and "Members" links on the top of the page
+5. Click "Data" and verify the page opens
+6. Click "Members" and verify the page opens with you as a member
+7. Dismiss the information pane on the right
+8. Click "Leave Space" on the top right, chose either of the radio buttons, and click OK
+9. Verify the center pane goes back to "Your Workspace" and that the new space is no longer on the navigation pane
+
+Click "Guide" and verify a new tab opens with documentation
+
+Click "What's New" and verify a new tab opens with the new information
+
+Click "Recipies" and verify the main pane updates with "Posit Recipies"
+
+Click "Cheatsheets" and verify a new tab opens with cheatsheet information
+
+Click "Current System Status" and verify a new tab opens with system status
+
+Click "Posit Community" and verify a new tab with a bulletin board opens
+
+Click "Plans & Pricing" and verify the main pane updates with pricing information
+
+Click "Terms and Conditions" and verify a new tab opens with terms of use
