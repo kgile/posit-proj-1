@@ -1,5 +1,5 @@
 
-### Posit Cloud Smoke Test Plan
+# Posit Cloud Smoke Test Plan
 
 High level functional test of Posit Cloud which can be executed manually in 15 minutes
 
@@ -16,7 +16,7 @@ Prereq: Log into Posit Cloud
 
 ## Landing page format
 
-# Navigation pane
+### Navigation pane
 
 Verify:
 1. Navigation pane is anchored on the left side of the page
@@ -28,7 +28,7 @@ Verify:
 
 Following the links and validation of the pages will be in later test cases in this plan.
 
-# Footer
+### Footer
 
 Verify:
 1. Footer is blue with white text, it does not overlap the navigation pane
@@ -44,7 +44,7 @@ Verify:
 
 No further verification of the links in the footer will be completed in this test, a longer test plan would follow the links
 
-# Main pane
+### Main pane
 
 
 
