@@ -8,8 +8,8 @@ Task 2 instructions:
 - clone this repo into a directory
 - change to that directory
 - do the following to install selenium:   _pip install -r requirements.txt_
-- edit task-2-test.py and enter user email and password values at lines 
-- do the following to run the test: _python3 task-t-test.py_
+- edit task-2-test.py and enter user email and password values at lines 14 and 15
+- do the following to run the test: _python3 task-2-test.py_
 - note, may be _py_ or _python_ instead of _python3_ depending on your environment
 
 
